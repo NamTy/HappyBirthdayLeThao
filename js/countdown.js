@@ -6,7 +6,7 @@ function countdown() {
   if (timeLeft > 0) {
     setTimeout(countdown, 1000);
   } else {
-      window.location = "../birthday.html";
+      window.location = "../HappyBirthdayLeThao/birthday.html";
   }
 }
 
