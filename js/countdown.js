@@ -6,7 +6,7 @@ function countdown() {
   if (timeLeft > 0) {
     setTimeout(countdown, 1000);
   } else {
-      window.location = "../HappyBirthdayLeThao/birthday.html";
+      window.location = "https://namty.github.io/HappyBirthdayLeThao/birthday.html";
   }
 }
 
