@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <audio controls autoplay>
+        <source src="./asset/media/Tieng-phao-hoa-no-tren-bau-troi-www_tiengdong_com.mp3" type="audio/mpeg">
+    </audio>
     <!-- partial:index.partial.html -->
     <div class="container">
         <div class="text" data-splitting="">Happy Birthday!</div>
@@ -41,9 +44,11 @@
     <script src='https://unpkg.com/splitting/dist/splitting.min.js'></script>
     <script src="./js/birthday.js"></script>
     <script type="text/javascript">
-        setTimeout(function() {
-            window.location = "./result.html";
-        }, 5000)
+        window.onload = function() {
+            setTimeout(function() {
+                window.location = "./result.html";
+            }, 5000)
+        }
     </script>
 </body>
 

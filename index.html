@@ -10,14 +10,19 @@
 </head>
 
 <body>
+    <audio controls autoplay>
+        <source src="./asset/media/Am-thanh-dem-nguoc-het-gio-www_tiengdong_com.mp3" type="audio/mpeg">
+    </audio>
     <div id="clock">
         <span id="seconds">3</span>
     </div>
     <script src="js/countdown.js"></script>
     <script type="text/javascript">
-        setTimeout(function() {
-            window.location = "./birthday.html";
-        }, 3000)
+        window.onload = function() {
+            setTimeout(function() {
+                window.location = "./birthday.html";
+            }, 4000)
+        };
     </script>
 </body>
 
