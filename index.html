@@ -10,22 +10,42 @@
 </head>
 
 <body>
-    <iframe src="./asset/media/Am-thanh-dem-nguoc-het-gio-www_tiengdong_com.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-    </iframe>
-    <!-- <audio controls loop autoplay>
+    <!-- <iframe src="./asset/media/Am-thanh-dem-nguoc-het-gio-www_tiengdong_com.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+    </iframe> -->
+    <audio controls loop id="audio">
         <source src="./asset/media/Am-thanh-dem-nguoc-het-gio-www_tiengdong_com.mp3" type="audio/mpeg">
-    </audio> -->
+    </audio>
+    <script type="text/javascript">
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (!isChrome) {
+            $('#iframeAudio').remove()
+        } else {
+            $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+        }
+    </script>
     <div id="clock">
         <span id="seconds">3</span>
     </div>
+    <input type="button" value="Start" onclick="play()">
     <script src="js/countdown.js"></script>
     <script type="text/javascript">
-        window.onload = function() {
+        function play() {
+            var audio = document.getElementById("audio");
+            timeLeft = 3;
 
-            setTimeout(function() {
-                window.location = "./birthday.html";
-            }, 4000)
-        };
+            function countdown() {
+                timeLeft--;
+                document.getElementById("seconds").innerHTML = String(timeLeft);
+                if (timeLeft > 0) {
+                    setTimeout(countdown, 1000);
+                } else {
+                    window.location = "./birthday.html";
+                }
+            }
+            audio.play();
+            setTimeout(countdown, 1000);
+
+        }
     </script>
 </body>
 
