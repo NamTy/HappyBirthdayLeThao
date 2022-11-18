@@ -10,15 +10,18 @@
 </head>
 
 <body>
-    <audio controls autoplay>
+    <iframe src="./asset/media/Am-thanh-dem-nguoc-het-gio-www_tiengdong_com.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+    </iframe>
+    <!-- <audio controls loop autoplay>
         <source src="./asset/media/Am-thanh-dem-nguoc-het-gio-www_tiengdong_com.mp3" type="audio/mpeg">
-    </audio>
+    </audio> -->
     <div id="clock">
         <span id="seconds">3</span>
     </div>
     <script src="js/countdown.js"></script>
     <script type="text/javascript">
         window.onload = function() {
+
             setTimeout(function() {
                 window.location = "./birthday.html";
             }, 4000)
